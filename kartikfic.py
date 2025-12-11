@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
 import time
 import re
-from duckduckgo_search import DDGS
 
 # --- PAGE CONFIGURATION (Must be first) ---
 st.set_page_config(
