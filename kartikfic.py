@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px  # This import is REQUIRED for the charts to work
 import re
+from duckduckgo_search import DDGS
 
 # --- PAGE CONFIGURATION (Must be first) ---
 st.set_page_config(
@@ -11,7 +13,6 @@ st.set_page_config(
 )
 
 # --- CUSTOM CSS FOR PROFESSIONAL UI ---
-# This injects the Teal (#208C8D) theme and card styles
 st.markdown("""
     <style>
     /* Main Background */
@@ -241,7 +242,7 @@ with tab3:
             "Amount (₹ Cr)": [consulting_fee/100, potential_savings]
         })
         
-        fig = plotly.bar(chart_data, x="Category", y="Amount (₹ Cr)", color="Category", 
+        fig = px.bar(chart_data, x="Category", y="Amount (₹ Cr)", color="Category", 
                      color_discrete_sequence=["#FF4B4B", "#00CC96"], 
                      text_auto=True)
         fig.update_layout(height=300)
