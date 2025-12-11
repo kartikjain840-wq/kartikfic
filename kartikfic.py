@@ -241,7 +241,7 @@ with tab3:
             "Amount (₹ Cr)": [consulting_fee/100, potential_savings]
         })
         
-        fig = px.bar(chart_data, x="Category", y="Amount (₹ Cr)", color="Category", 
+        fig = plotly.bar(chart_data, x="Category", y="Amount (₹ Cr)", color="Category", 
                      color_discrete_sequence=["#FF4B4B", "#00CC96"], 
                      text_auto=True)
         fig.update_layout(height=300)
