@@ -1,6 +1,12 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px  # This import is REQUIRED for the charts to work
+python -m pip install -r requirements.txt
+Then run the app:
+```bash
+python -m streamlit run faber_nexus_dashboard.py
+import plotly.express as px 
+
+#This import is REQUIRED for the charts to work
 import re
 from duckduckgo_search import DDGS
 
